@@ -1,36 +1,27 @@
-import React from 'react'
-import "./home.css"
+import React from 'react';
+import "./home.css";
 import { Link } from 'react-router-dom';
-import { useRecoilState} from 'recoil';
-import CountValueAtom from '../recoil/CountValueAtom';
+import bgImage from "../assets/fashion.png"; // ensure this path is correct
 
 const Home = () => {
-
-    const[countValue, setCountValue] = useRecoilState(CountValueAtom);
-  
   return (
-    <div>
-        <h1>Home</h1>
-
-        <div>
-             {/*  <h1>Current Count Value is:{countValue}</h1>
-            </div>
-        <div className='link-wrapper'>
-            <div>
-            <Link to="/counter">Counter</Link>
-            </div>
- */}
-            
-            <div>
-            <Link to="/shopping">Shopping</Link>
-            </div>
-            
-            
-        </div>
-        
-
+    <div
+      className="hero"
+      style={{
+        backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.35), rgba(0,0,0,0.7)), url(${bgImage})`
+      }}
+    >
+      <div className="glass-card">
+        <h1 className="fade-in-title blended-text">Welcome to MythCart</h1>
+<p className="fade-in-text blended-subtext">
+  Find your style, explore the latest trends.
+</p>
+<Link to="/shopping" className="shop-btn fade-in-btn pulse subtle-btn">
+  Start Shopping
+</Link>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

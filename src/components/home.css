@@ -1,18 +1,163 @@
-.link-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
-    gap: 60px;
-    width: 100%;
+.home-container {
+  font-family: 'Poppins', sans-serif;
 }
-.link-wrapper > div{
-    background-color: white;
-    border-radius: 20px;
-    padding: 50px;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
+
+
+
+/* Hero Section */
+/* Hero Background */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.link-wrapper > div:active{
-    transform: scale(0.8);
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 50px 70px;
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Title */
+.glass-card h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Paragraph */
+.glass-card p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Start Shopping Button */
+.shop-btn {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: linear-gradient(135deg, #ff4e75, #ff6fa5);
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 118, 153, 0.6);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bgZoom {
+  0% { background-size: 100%; }
+  100% { background-size: 110%; }
+}
+
+/* Staggered Fade-in */
+.fade-in-title {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-text {
+  animation: fadeIn 1.3s ease forwards;
+}
+
+.fade-in-btn {
+  animation: fadeIn 1.6s ease forwards;
+}
+
+
+/* Dark Overlay */
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 50px;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.overlay h1 span {
+  color: #ff4b5c;
+}
+
+.overlay p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+/* Start Shopping Button */
+.shop-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff4b5c, #ff758c);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 20px rgba(255, 75, 92, 0.4);
+}
+
+/* Button Pulse Animation */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 75, 92, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(255, 75, 92, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 75, 92, 0); }
+}
+
+/* Fade-in for text */
+.fade-in {
+  opacity: 0;
+  animation: fadeInText 1s ease forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeInText 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; }
 }
